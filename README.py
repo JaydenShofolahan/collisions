@@ -9,6 +9,7 @@ file = input("Enter a csv file")
 output = input("Enter an output of the file name") 
 
 collides = pd.read_csv(file) 
+print(collides["Location"])
 
 mapCollide = folium.Map(location=[0,0], zoom_start = 3)
 
