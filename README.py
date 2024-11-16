@@ -16,7 +16,7 @@ mapCollide = folium.Map(location=[0,0], zoom_start = 3)
 for index, row in collides.interrows():
   latitude = row["LATITUDE"] 
   longitude = row["LONGITUDE"] 
-  place = row["location"] 
+  place = row["TIME"] 
   ano_place = folium.Marker([latitude, longitude], popup=place) 
   ano_place.add_to(mapCollide) 
 
