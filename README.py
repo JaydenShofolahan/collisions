@@ -19,4 +19,4 @@ for index, row in collides.interrows():
   ano_place = folium.Marker([latitude, longitude], popup=place) 
   ano_place.add_to(mapCollide) 
 
-mapCollide.save(outsave = output) 
+mapCollide.save(outfile = output) 
