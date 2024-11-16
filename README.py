@@ -11,7 +11,7 @@ output = input("Enter an output of the file name")
 collides = pd.read_csv(file) 
 print(collides["Location"])
 
-mapCollide = folium.Map(location=[0,0], zoom_start = 3)
+mapCollide = folium.Map(location=[40.768731,-73.964915])
 
 for index, row in collides.interrows():
   latitude = row["LATITUDE"] 
