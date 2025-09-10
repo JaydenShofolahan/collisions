@@ -1,23 +1,16 @@
 #Name: Jayden 
 #Date: 11/16/2024 
+#Name: Jayden 
+#Date: 11/16/2024 
 #Description: This program will map collisions from a user 
+ import pandas as pd 
+ import matplotbylib.pyplot as plt
 
-import folium 
-import pandas 
+df =  pd.read_csv("plot_data.csv")
 
-file = input("Enter a csv file") 
-output = input("Enter an output of the file name") 
+plt.plot(x_values, y_values)
+    plt.xlabel('X-axis Label')
+    plt.ylabel('Y-axis Label')
+    plt.title('My Plot')
+    plt.show()
 
-collides = pd.read_csv(file) 
-#print(collides["Location"])
-
-mapCollide = folium.Map(location=[40.768731,-73.964915])
-
-for index, row in collides.interrows():
-  latitude = row["LATITUDE"] 
-  longitude = row["LONGITUDE"] 
-  place = row["TIME"] 
-  ano_place = folium.Marker([latitude, longitude], popup=place) 
-  ano_place.add_to(mapCollide) 
-
-mapCollide.save(outfile = output) 
